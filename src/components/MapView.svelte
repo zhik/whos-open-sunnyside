@@ -31,12 +31,39 @@
         }
     }
 
+    function updateExtentFilter(filterExtent) {
+        console.log('filtering')
+        const features = map.queryRenderedFeatures({layers: ['markers', 'points']});
+
+        if (features) {
+            const unqiueIds = [...new Set(features.map(feature => feature.properties.id))]
+            if ($filters) {
+                //remove existing filter
+                const _filters = $filters
+                const filter = _filters.findIndex(f => f.label === 'map-extent')
+                if (filter > -1) _filters.splice(filter, 1)
+                if (filterExtent) {
+                    //generate new filter
+                    const mapExtentFilter = {
+                        label: 'map-extent',
+                        filter: row => unqiueIds.includes(row.id)
+                    }
+                    filters.set([..._filters, mapExtentFilter])
+                } else {
+                    filters.set(_filters)
+                }
+            }
+        }
+    }
+
+    $: if (map && loaded) updateExtentFilter($filterExtent) //update filter when $filterExtent checkbox store changes
+
     onMount(() => {
         mapboxgl.accessToken = 'pk.eyJ1IjoiemhpayIsImEiOiJjaW1pbGFpdHQwMGNidnBrZzU5MjF5MTJiIn0.N-EURex2qvfEiBsm-W9j7w';
         map = new mapboxgl.Map({
             container,
             style: 'mapbox://styles/zhik/ckasluk5s182v1itdbeedp34j',
-            center: [-73.91,40.7548],
+            center: [-73.91, 40.7548],
             zoom: 12.2,
             maxZoom: 20,
             minZoom: 10
@@ -53,7 +80,6 @@
         });
 
         map.on('load', () => {
-            loaded = true;
             const data = generateFeatures(items)
 
             map.addSource('points', {
@@ -151,6 +177,8 @@
                     }))
             )
                     .then(() => {
+                        loaded = true;
+
                         map.addLayer({
                             id: 'markers',
                             type: 'symbol',
@@ -204,33 +232,7 @@
                             selectedItem.select(feature.properties)
                         });
 
-                        map.on('moveend', () => {
-                            function updateFilter(ids, filterExtent) {
-                                if ($filters) {
-                                    //remove existing filter
-                                    const _filters = $filters
-                                    const filter = _filters.findIndex(f => f.label === 'map-extent')
-                                    if (filter > -1) _filters.splice(filter, 1)
-                                    if (filterExtent) {
-                                        //generate new filter
-                                        const mapExtentFilter = {
-                                            label: 'map-extent',
-                                            filter: row => ids.includes(row.id)
-                                        }
-                                        filters.set([..._filters, mapExtentFilter])
-                                    } else {
-                                        filters.set(_filters)
-                                    }
-                                }
-                            }
-
-                            const features = map.queryRenderedFeatures({layers: ['markers', 'points']});
-
-                            if (features) {
-                                const unqiueIds = [...new Set(features.map(feature => feature.properties.id))]
-                                updateFilter(unqiueIds, $filterExtent)
-                            }
-                        });
+                        map.on('moveend', () => updateExtentFilter($filterExtent));
                     })
         })
 
