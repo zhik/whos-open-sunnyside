@@ -1,7 +1,13 @@
 <script>
     import {categoryGroups, styles} from '../../constants'
 
-    let opened = true
+    let opened = localStorage.getItem('header') === null ? true : JSON.parse(localStorage.getItem('header'));
+
+    function toggleOpen(){
+        //toggle and save to local storage
+        opened = !opened
+        localStorage.setItem('header', opened)
+    }
 
     //group similar colors
     const groups = styles.filter(i => i.group).reduce((groups, i) => {
@@ -24,7 +30,7 @@
 <div class="legend" id="legend">
     <div class="legend-title">
         <h5>Legend</h5>
-        <p><a href="#legend" aria-label="Hide map legend" on:click={() => opened = !opened}>{opened ? 'Hide' : 'Show'}</a></p>
+        <p><a href="#legend" aria-label="Hide map legend" on:click={toggleOpen}>{opened ? 'Hide' : 'Show'}</a></p>
     </div>
     {#if opened}
         {#each Object.values(groups) as group}
@@ -41,11 +47,14 @@
         line-height: 18px;
         color: #212121;
         position: absolute;
-        left: 10px;
-        top: 10px;
-        z-index: 2;
+        right: 5px;
+        bottom: 30px;
+        z-index: 200;
+        border-radius: 3px;
         background-color: rgba(255, 255, 255, 0.8);
-        padding: 5px 10px;
+        box-shadow: 0px 1px 2px rgba(136, 136, 136, 0.6);
+        padding: 5px 5px;
+        margin-bottom: 0px;
         max-width: 80%;
     }
 
@@ -55,8 +64,13 @@
         justify-content: space-between;
     }
 
-    .legend-title p {
-        margin-left: 1rem;
+    .legend-title p{
+        margin-bottom: 0;
+    }
+
+    .legend-title h5{
+        margin-right: 1rem;
+        margin-bottom: 0;
     }
 
     .legend-item {

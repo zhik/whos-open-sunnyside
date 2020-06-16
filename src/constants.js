@@ -33,7 +33,7 @@ export const styles = [
         group: 'Food & Beverage',
         categoryName: 'Restaurants, Bars, Cafes & Bakeries',
         subcategoryName: null,
-        fillColor: '#2637cc',
+        fillColor: '#1eb0a9',
         strokeColor: '#000',
         icon: 'restaurant.png'
     },
