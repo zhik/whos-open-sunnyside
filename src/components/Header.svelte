@@ -3,7 +3,13 @@
   import MaterialIcon from "./MaterialIcon.svelte";
 
   let innerWidth;
-  let opened = false;
+  let opened = localStorage.getItem('header') === null ? true : JSON.parse(localStorage.getItem('header'));
+
+  function toggleOpen(){
+      //toggle and save to local storage
+      opened = !opened
+      localStorage.setItem('header', opened)
+  }
 </script>
 
 <style>
@@ -39,6 +45,10 @@
   p {
     margin-bottom: 0.25rem !important;
   }
+
+  .button {
+    font-weight: bold;
+  }
 </style>
 
 <svelte:window bind:innerWidth />
@@ -60,18 +70,12 @@
       <div id="subtitle">
         <p class="is-6">
           Who's Open Queens is a community resource mapping Queens' businesses
-          during the COVID-19 crisis.
-        </p>
-        <p class="is-6">
-          In cooperation with Sunnyside Shines, Queens Together, Sunnyside
+          during the COVID-19 crisis. In cooperation with Sunnyside Shines, Queens Together, Sunnyside
           Gardens Park, and BetaNYC.
-          <strong>
-            To add or update info fill out
-            <a href="https://airtable.com/shrUCeoQpIRfNFh59" target="_blank">
-              this form.
-            </a>
-          </strong>
         </p>
+        <div class="buttons">
+          <a href="https://airtable.com/shrUCeoQpIRfNFh59" target="_blank" class="button is-info">Missing Business or Outdated Info?</a>
+        </div>
       </div>
     {/if}
   {:else}
@@ -90,18 +94,12 @@
       <div id="subtitle">
         <p class="is-6">
           Who's Open Queens is a community resource mapping Queens' businesses
-          during the COVID-19 crisis.
-        </p>
-        <p class="is-6">
-          In cooperation with Sunnyside Shines, Queens Together, Sunnyside
+          during the COVID-19 crisis. In cooperation with Sunnyside Shines, Queens Together, Sunnyside
           Gardens Park, and BetaNYC.
-          <strong>
-            To add or update info fill out
-            <a href="https://airtable.com/shrUCeoQpIRfNFh59" target="_blank">
-              this form.
-            </a>
-          </strong>
         </p>
+        <div class="buttons">
+          <a href="https://airtable.com/shrUCeoQpIRfNFh59" target="_blank" class="button is-small is-info">Missing Business or Outdated Info?</a>
+        </div>
       </div>
     {/if}
   {/if}
