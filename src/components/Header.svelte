@@ -56,7 +56,7 @@
 <header>
   {#if innerWidth > 768}
     <div class="header-bar">
-      <h3 class="title is-3" id="title">Who's Open Queens</h3>
+      <h3 class="title is-3" id="title">Who's Open Sunnyside</h3>
       <div class="buttons has-text-right">
         <TranslationMenu className="is-small" />
         <button
@@ -69,7 +69,7 @@
     {#if opened}
       <div id="subtitle">
         <p class="is-6">
-          Who's Open Queens is a community resource mapping Queens' businesses
+          Who's Open Sunnyside is a community resource mapping Sunnyside businesses
           during the COVID-19 crisis. In cooperation with Sunnyside Shines, Queens Together, Sunnyside
           Gardens Park, and BetaNYC.
         </p>
@@ -80,7 +80,7 @@
     {/if}
   {:else}
     <div class="header-bar">
-      <h3 class="title is-5">Who's Open Queens</h3>
+      <h3 class="title is-5">Who's Open Sunnyside</h3>
       <div class="buttons has-text-right">
         <TranslationMenu className="is-small" />
         <button
@@ -93,7 +93,7 @@
     {#if opened}
       <div id="subtitle">
         <p class="is-6">
-          Who's Open Queens is a community resource mapping Queens' businesses
+          Who's Open Sunnyside is a community resource mapping Sunnyside businesses
           during the COVID-19 crisis. In cooperation with Sunnyside Shines, Queens Together, Sunnyside
           Gardens Park, and BetaNYC.
         </p>
