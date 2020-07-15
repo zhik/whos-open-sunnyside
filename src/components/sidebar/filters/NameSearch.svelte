@@ -57,6 +57,7 @@
                     bind:value
                     autocomplete="off"
                     on:keyup="{_search}"
+                    class="input"
             />
         </div>
     </div>
@@ -67,11 +68,8 @@
         margin-bottom: 1rem;
     }
 
-    #text-input {
-        width: 100%;
-        padding: 5px 5px;
-        box-sizing: border-box;
-        margin-bottom: 5px;
+    input{
+        margin-right: 0.5em;
     }
 
     ::placeholder {

@@ -11,8 +11,8 @@
 
 <div class="sidebar-content">
     <div class="search">
-        <AddressSearch/>
         <NameSearch/>
+        <AddressSearch/>
         <OtherFilters/>
     </div>
     <div class="items">

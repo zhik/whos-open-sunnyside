@@ -65,7 +65,7 @@
             <div class="control is-expanded">
                 <input
                         id="address"
-                        placeholder="120-55 Queens Boulevard"
+                        placeholder="48-21 39th Ave"
                         type="text"
                         name="address"
                         bind:value
@@ -97,7 +97,7 @@
 
 <style>
     form {
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
     }
 
     #address {
@@ -143,9 +143,14 @@
 
     label {
         margin-right: 1em;
+        font-size: 0.9rem;
     }
 
     input{
         margin-right: 0.5em;
+    }
+
+    .field{
+        margin-bottom: 0 !important;
     }
 </style>
