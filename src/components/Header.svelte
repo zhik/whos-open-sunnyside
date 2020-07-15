@@ -61,7 +61,7 @@
         <TranslationMenu className="is-small" />
         <button
           class="button is-small {opened ? 'is-clicked' : ''}"
-          on:click={() => (opened = !opened)}>
+          on:click={toggleOpen}>
           <MaterialIcon icon="info" />
         </button>
       </div>
@@ -85,7 +85,7 @@
         <TranslationMenu className="is-small" />
         <button
           class="button is-small {opened ? 'is-clicked' : ''}"
-          on:click={() => (opened = !opened)}>
+          on:click={toggleOpen}>
           <MaterialIcon icon="info" />
         </button>
       </div>
