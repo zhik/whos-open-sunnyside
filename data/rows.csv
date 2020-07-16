@@ -1271,7 +1271,7 @@ Bistro Eloise remains open, and will deliver to Sunnyside, Woodside, Forest Hill
 ","meal_takeaway,restaurant,food","11106","2020-05-29T17:32:14.000Z",,,,,,,,,,,,,,
 "Subway",1210,"2020-04-12T04:00:00.000Z",,,"Hunters Point-Sunnyside-West Maspeth","Restaurants, Bars, Cafes & Bakeries",40.738329,-73.928406,,"Mon-Fri 7am-11:30pm; Sat 9am-11:30pm; Sun 8:00-11:30
 ",,"11101","2020-05-29T17:32:14.000Z",,,,,,,,,,,,,,
-"3 Bros 99 Cent Pizza",1211,,"(718) 777-7133","https://www.3bros99centpizzamenu.com/","Old Astoria","Restaurants, Bars, Cafes & Bakeries",40.768676,-73.92476,"2503 30th Ave, Astoria",,"restaurant,food","11102","2020-05-29T17:32:14.000Z",,,,,,,,,,,,,,
+"3 Bros 99 Cent Pizza",1211,,"(718) 777-7133","https://www.3bros99centpizzamenu.com/","Old Astoria","Restaurants, Bars, Cafes & Bakeries",40.768676,-73.92476,"2503 30th Ave, Astoria",,"restaurant,food","11102","2020-05-29T17:32:14.000Z","Open",,,,,,,,,,,,,
 "Addy's BBQ Astoria",1212,"2020-04-13T04:00:00.000Z","(718) 433-9568",,"Astoria","Restaurants, Bars, Cafes & Bakeries",40.761705,-73.917011,"30-94 Steinway St, Astoria","[Closed at this time]
 ","restaurant,food","11103","2020-05-29T17:32:14.000Z",,,,,,,,,,,,,,
 "Maiella",1213,"2020-04-09T04:00:00.000Z","(718) 606-1770","http://www.maiellalic.com/","Hunters Point-Sunnyside-West Maspeth","Restaurants, Bars, Cafes & Bakeries",40.747194,-73.956667,"4610 Center Blvd, Long Island City","Takeout & Delivery Call 718-606-1770 See website for large family meals [www.maiellalic.com][1] Staff go fund me <https://www.gofundme.com/f/gantry-hospitality-family-relief-fund>
@@ -1983,8 +1983,8 @@ Bistro Eloise remains open, and will deliver to Sunnyside, Woodside, Forest Hill
 ","Fitness","11104","2020-05-29T17:32:14.000Z",,,,,,,,,,,,,,
 "Bicycle Man: Repair & Sales",2027,"2020-06-03T04:00:00.000Z","(718) 706-0450",,"Astoria","Bicycle Shops",40.755305,-73.921297,"40-21a 35th Ave, Astoria, NY 11101",,"bicycle_store,Bike Shops",,"2020-06-03T23:20:06.000Z","Open","Katelyn","Mon-Fri 11-4pm
 ",,,,,,,,,,,
-"5 Hermanos Bike Shop",2028,"2020-06-03T04:00:00.000Z","(347) 358-3189",,"Astoria","Bicycle Shops",40.761021,-73.916058,"41-01 31st Ave, Astoria, NY 11103",,"bicycle_store,Bike Shops",,"2020-06-03T23:20:06.000Z","Open","Katelyn","10am - 5pm everyday 
-",,,,,,,,,,,
+"5 Hermanos Bike Shop",2028,"2020-06-03T04:00:00.000Z","(347) 358-3189",,"Astoria","Bicycle Shops",40.761021,-73.916058,"41-01 31st Ave, Astoria, NY 11103",,"bicycle_store,Bike Shops","11103","2020-06-03T23:20:06.000Z","Open","Katelyn","10am - 5pm daily
+",,,,true,,,,,,,
 "Bike Stop Astoria",2029,"2020-06-03T04:00:00.000Z","(718) 278-2453",,"Astoria","Bicycle Shops",40.766075,-73.914491,"37-19 28th Ave, Astoria, NY 11103",,"bicycle_store,Bike Shops",,"2020-06-03T23:20:06.000Z","Open","Katelyn","10am - 6pm everyday
 ",,,,,,,,,,,
 "Tony's Bicycles",2030,"2020-06-03T04:00:00.000Z","(718) 278-3355",,"Astoria","Bicycle Shops",40.773101,-73.910766,"35-01 23rd Ave, Astoria, NY 11105",,"bicycle_store,Bike Shops",,"2020-06-03T23:20:06.000Z","Open","Katelyn","Mon - Sat: 10am - 7pm
